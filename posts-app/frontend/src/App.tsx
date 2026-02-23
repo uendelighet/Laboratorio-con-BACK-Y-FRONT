@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_URL = 'https://laboratorio-con-back-y-front.vercel.app/';
+const API_URL = 'https://laboratorio-con-back-y-front.vercel.app';
 
 interface Post {
   id: string;
