@@ -1,28 +1,67 @@
 {
   "compilerOptions": {
+    // Archivo donde TypeScript guarda información para compilación incremental
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    // Versión de JavaScript a la que se transpila el código
     "target": "ES2022",
+
+    // Usa la implementación moderna de class fields según el estándar actual
     "useDefineForClassFields": true,
+
+    // Librerías disponibles en el entorno (JS moderno + APIs del navegador)
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Genera módulos ES modernos (import/export)
     "module": "ESNext",
+
+    // Incluye tipos especiales de Vite (por ejemplo import.meta.env)
     "types": ["vite/client"],
+
+    // Omite la revisión de tipos dentro de node_modules (mejora rendimiento)
     "skipLibCheck": true,
 
     /* Bundler mode */
+
+    // Resuelve módulos como lo haría un bundler moderno (ej. Vite)
     "moduleResolution": "bundler",
+
+    // Permite importar archivos con extensión .ts explícitamente
     "allowImportingTsExtensions": true,
+
+    // Respeta exactamente la sintaxis de imports/exports escrita
     "verbatimModuleSyntax": true,
+
+    // Fuerza a que todos los archivos se traten como módulos
     "moduleDetection": "force",
+
+    // No genera archivos .js, solo hace verificación de tipos
     "noEmit": true,
+
+    // Usa el runtime moderno de React (no requiere importar React manualmente)
     "jsx": "react-jsx",
 
     /* Linting */
+
+    // Activa todas las verificaciones estrictas de TypeScript
     "strict": true,
+
+    // Error si hay variables declaradas pero no usadas
     "noUnusedLocals": true,
+
+    // Error si hay parámetros declarados pero no usados
     "noUnusedParameters": true,
+
+    // Solo permite sintaxis que pueda eliminarse sin afectar el runtime (opción avanzada)
     "erasableSyntaxOnly": true,
+
+    // Evita que un case en switch continúe al siguiente sin break
     "noFallthroughCasesInSwitch": true,
+
+    // Evita imports con efectos secundarios no verificados
     "noUncheckedSideEffectImports": true
   },
+
+  // Solo incluye archivos dentro de la carpeta src
   "include": ["src"]
 }
